@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: marcsamuelpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: marcsamuelpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: marcsamuelpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: marcsamuelpipelinesjavascriptdocker 
+          image: marccontainerregistryko.azurecr.io/marcsamuelpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
